@@ -1,0 +1,37 @@
+div.oculto{
+    visibility: hidden;
+}
+
+img.animal:hoover div.oculto{
+    visibility: visible;
+}
+
+body{
+
+    margin: 0 auto;
+}
+
+body.container{
+    width: 50%;
+}
+header{
+    background: 50%;
+    background: black;
+    border-color: cornflowerblue;
+
+}
+article {
+    background: cornflowerblue;
+    width: 85%;
+    float: right;
+
+
+}
+
+aside {
+    background: lightgreen;
+    width: 15%;
+    float: left;
+
+}
+
