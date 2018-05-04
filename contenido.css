@@ -34,4 +34,91 @@ aside {
     float: left;
 
 }
+/*Aquí empieza el css para el botón desplegable*/
+#activar {
+    display: none;
+}
 
+#activar ~ .desplegable {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 30px;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.8s linear;
+    z-index: 1;
+}
+
+#activar ~ .desplegable .contenido {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background: #000;
+}
+
+.label {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    line-height: 30px;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: orange;
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    font-family: Oswald;
+    cursor: pointer;
+}
+#activar ~ .desplegable .label:before {
+    content: "¡Bienvenidos a los Macaloa!";
+}
+
+#activar:checked ~ .desplegable,
+#activar:checked ~ .desplegable .contenido {
+    max-height: 100%;
+}
+
+#activar:checked ~ .desplegable .contenido {
+    padding: 30px 20px;
+}
+
+#activar:checked ~ .desplegable .label:before {
+    content: "CERRAR";
+}
+div.iconmenu div a {
+    text-decoration: none;
+    color: orange;
+    padding: 0 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 13px;
+    line-height: 13px;
+    box-sizing: border-box;
+}
+
+div.iconmenu div a.falink {
+    color: #007BB6;
+}
+
+div.iconmenu div a.faface {
+    color: #3C599F;
+}
+
+div.iconmenu div a.fagoog {
+    color: #DA2713;
+}
+
+div.iconmenu div a.fatwit {
+    color: #5DD7FC;
+}
+
+div.iconmenu div a:hover {
+    color: orange;
+}

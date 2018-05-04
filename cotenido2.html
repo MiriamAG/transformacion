@@ -5,20 +5,36 @@
     <title> La familia</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="contenido.css">
+    <!--Estilo de letras-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body class="container">
+
 <header>
    <div class="container">
        <!--Primera fila con información y bienvenida o título de la página-->
        <div class="row align-items-start">
            <div class="col-sm-auto">
-               Información de contacto rápido(botones de fb,tlf, etc)
+               <input id="activar" name="activar" type="checkbox">
+               <div class="desplegable">
+                   <div class="contenido">
+
+                       <div class="iconmenu">
+                           <div class="row">
+                           <div class="col-3"><a class="falink" href="https://www.linkedin.com/">Linkedin</a></div>
+                           <div class="col-3"><a class="fagoog" href="https://plus.google.com/">Google+</a></div>
+                           <div class="col-3"><a class="fatwit" href="https://twitter.com/">Twitter</a></div>
+                           <div class="col-3"><a class="faface" href="https://www.facebook.com/labradoresdemocaloa">Facebook</a></div>
+                           </div>
+                       </div>
+                       <!-- Fin contenido -->
+                   </div>
+                   <label class="label" for="activar"></label>
+               </div>
            </div>
-           <div class="col-sm-auto">
-               ¡Bienvenidos a los Macaloa!
-           </div>
+
        </div>
        <!-- foto de portada, no se ajusta al tamaño de la portada-->
        <div class="row align-items-center">
@@ -47,6 +63,7 @@
        </div>
    </div>
 </header>
+
 
 <aside>
     <div class="container">
