@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Petición de información</title>
+</head>
+<body link="#5f9ea0" alink="#5f9ea0" vlink="#5f9ea0">
+<header>
+    <table align="center" bgcolor="black">
+        <tr>
+            <td><img src="multimedia/Captura.JPG"/></td>
+        </tr>
+    </table>
+
+    <table  id="navegador" width="50%" align="center" bgcolor="black">
+
+        <tr align="center">
+            <td><a href="index.xml.html">Inicio</a></td>
+            <td><a href="cotenido.html">Contenido</a></td>
+        </tr>
+    </table>
+</header>
+<form action="/index.xml.html" method="get">
+    <fieldset>
+        <legend><h1>Solicitud de informaci&oacute;n:</h1></legend>
+        <label for="nombre"><b>Nombre:</b></label></br>
+        <input type="text" name="nombre" id="nombre"/></br>
+        <label for="mail"><b>e-mail:</b></label></br>
+        <input type="email" name="email" id="mail"></br></br>
+        <b>Elige la informacion que quieras recibir:</b></br>
+        <input type="checkbox" name="general" value="general">General</input></br>
+        <input type="checkbox" name="cachorros" value="cachorros">Sobre disponibilidad de cachorros</input></br>
+        <input type="checkbox" name="nosotros" value="nosotros">Sobre nosotros</input></br>
+        <input type="checkbox" name="ubicacion" value="ubicacion">Sobre ubicacion</input></br></br>
+
+        <input type="radio" name="novedades" value="novedades" checked="checked">¿Quieres recibir información sobre nuestras novedades?</input></br></br>
+        <input type="submit" value="Solicitar"/>
+        <input type="reset" value="Volver al estado inicial" value="resetear datos"/>
+
+    </fieldset>
+</form>
+
+
+<footer>
+    <div><h2>¡Gracias por tenernos en cuenta!</h2></div>
+
+</footer>
+</body>
+</html>
