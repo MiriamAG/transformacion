@@ -5,33 +5,41 @@ div.oculto{
 img.animal:hoover div.oculto{
     visibility: visible;
 }
-
+/*https://hdwallsource.com/img/2014/8/adorable-labrador-wallpaper-23487-24139-hd-wallpapers.jpg
+http://getwallpapers.com/wallpaper/full/e/4/d/1187374-cool-labrador-wallpaper-backgrounds-1920x1080-for-lockscreen.jpg
+http://walldiskpaper.com/wp-content/uploads/2015/01/Black-Dog-Wallpaper-Windows.jpeg
+https://eljardindemaruylola.es/wp-content/uploads/2014/07/Flowers-White-Chamomiles-Field-Wallpaper.jpg
+http://tartahome.es/wp-content/uploads/2016/10/372693-fondo-web.jpg*/
 body{
+    background-image: url("http://walldiskpaper.com/wp-content/uploads/2015/01/Black-Dog-Wallpaper-Windows.jpeg");
 
     margin: 0 auto;
 }
 
 body.container{
     width: 50%;
+
 }
 header{
     background: 50%;
     background: black;
-    border-color: cornflowerblue;
+
 
 }
 article {
-    background: cornflowerblue;
+
     width: 85%;
     float: right;
-
+    border-radius: 0 0 30px 30px;
 
 }
 
 aside {
+    opacity: 0.5;
     background: lightgreen;
     width: 15%;
     float: left;
+    border-radius: 0 0 30px 30px;
 
 }
 /*Aquí empieza el css para el botón desplegable*/
@@ -40,20 +48,20 @@ aside {
 }
 
 #activar ~ .desplegable {
-    position: fixed;
-    top: 0;
+    position: fixed;/*Posicion fija del despliegue, si no está empuja hacia abajo la imagen en vez de deslizarse*/
+    top: 0;/*dónde empieza el boton*/
     left: 0;
-    width: 100%;
+    width: 100%;/*Lo que ocupa de ancho*/
     max-height: 30px;
     overflow: hidden;
     text-align: center;
-    transition: max-height 0.8s linear;
-    z-index: 1;
+    transition: max-height 0.8s linear;/*el tiempo que tarda en desplazarse*/
+    z-index: 1;/*la posicion en la que está, encima de la foto*/
 }
-
+/*Este es el contenido del desplegable*/
 #activar ~ .desplegable .contenido {
-    width: 100%;
-    max-height: 0;
+    width: 100%;/* Lo que ocupa*/
+    max-height: 0;/*Desaparece el boton si se cambia*/
     overflow: hidden;
     padding: 0 20px;
     border: 0;
@@ -72,18 +80,18 @@ aside {
     box-sizing: border-box;
     color: orange;
     background: #000;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 30px 30px;
     text-align: center;
     font-family: Oswald;
-    cursor: pointer;
+    cursor: pointer;/*cambia el tipo de cursor cuando se está sobre el boton*/
 }
 #activar ~ .desplegable .label:before {
-    content: "¡Bienvenidos a los Macaloa!";
+    content: "¡Bienvenidos a los Macaloa!";/*contenido del label*/
 }
 
 #activar:checked ~ .desplegable,
 #activar:checked ~ .desplegable .contenido {
-    max-height: 100%;
+    max-height: 100%;/*el porcentaje de contenido que muestra*/
 }
 
 #activar:checked ~ .desplegable .contenido {
@@ -93,13 +101,19 @@ aside {
 #activar:checked ~ .desplegable .label:before {
     content: "CERRAR";
 }
+div.iconmenu div {
+    position: relative;
+    display: inline;/*cómo se distribuyen los contenidos, en linea o en bloque*/
+    overflow: hidden;
+}
+
 div.iconmenu div a {
     text-decoration: none;
     color: orange;
     padding: 0 10px;
     font-family: Oswald, sans-serif;
-    font-size: 13px;
-    line-height: 13px;
+    font-size: 26px;
+    line-height: 26px;
     box-sizing: border-box;
 }
 
