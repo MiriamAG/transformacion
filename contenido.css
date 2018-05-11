@@ -13,7 +13,9 @@ body{
 }
 
 body.container{
-    width: 50%;
+    width: 42%;
+    height: 50%
+;
 
 }
 
@@ -25,25 +27,46 @@ header{
 
 }
 
-
-section {
+section{
 
     width: 85%;
-    height: 500px;
+    padding-bottom: 25px;
     float: right;
     border-radius: 0 0 30px 30px;
     background-color: #3C599F;
+
 }
 
 aside {
-    opacity: 0.5;
-    background: lightgreen;
+
     width: 15%;
     height: 500px;
     float: left;
     border-radius: 0 0 30px 30px;
 
 }
+
+img.mySlides{
+    width: 100%;
+    height: 100%;
+}
+
+article.container {
+    margin: 0 auto;
+
+}
+img.animal{
+    width: 100%;
+    height: auto;
+}
+
+#madre{
+
+width: auto;
+}
+/*slider*/
+
+
 /*Aquí empieza el css para el botón desplegable*/
 #activar {
     display: none;
