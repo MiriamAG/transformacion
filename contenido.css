@@ -1,10 +1,6 @@
-div.oculto{
-    visibility: hidden;
-}
+/*Mostrar sección cuando se clicke quienes somos*/
 
-img.animal:hoover div.oculto{
-    visibility: visible;
-}
+
 /*https://hdwallsource.com/img/2014/8/adorable-labrador-wallpaper-23487-24139-hd-wallpapers.jpg
 http://getwallpapers.com/wallpaper/full/e/4/d/1187374-cool-labrador-wallpaper-backgrounds-1920x1080-for-lockscreen.jpg
 http://walldiskpaper.com/wp-content/uploads/2015/01/Black-Dog-Wallpaper-Windows.jpeg
@@ -12,32 +8,38 @@ https://eljardindemaruylola.es/wp-content/uploads/2014/07/Flowers-White-Chamomil
 http://tartahome.es/wp-content/uploads/2016/10/372693-fondo-web.jpg*/
 body{
     background-image: url("http://walldiskpaper.com/wp-content/uploads/2015/01/Black-Dog-Wallpaper-Windows.jpeg");
-
     margin: 0 auto;
+
 }
 
 body.container{
     width: 50%;
 
 }
+
+
 header{
     background: 50%;
     background: black;
 
 
 }
-article {
+
+
+section {
 
     width: 85%;
+    height: 500px;
     float: right;
     border-radius: 0 0 30px 30px;
-
+    background-color: #3C599F;
 }
 
 aside {
     opacity: 0.5;
     background: lightgreen;
     width: 15%;
+    height: 500px;
     float: left;
     border-radius: 0 0 30px 30px;
 
@@ -52,7 +54,7 @@ aside {
     top: 0;/*dónde empieza el boton*/
     left: 0;
     width: 100%;/*Lo que ocupa de ancho*/
-    max-height: 30px;
+    max-height: 10%;
     overflow: hidden;
     text-align: center;
     transition: max-height 0.8s linear;/*el tiempo que tarda en desplazarse*/
@@ -86,7 +88,7 @@ aside {
     cursor: pointer;/*cambia el tipo de cursor cuando se está sobre el boton*/
 }
 #activar ~ .desplegable .label:before {
-    content: "¡Bienvenidos a los Macaloa!";/*contenido del label*/
+    content: "¡Bienvenidos a los Mocaloa!";/*contenido del label*/
 }
 
 #activar:checked ~ .desplegable,
@@ -135,4 +137,67 @@ div.iconmenu div a.fatwit {
 
 div.iconmenu div a:hover {
     color: orange;
+}
+
+/* Contenido lateral oculto*/
+/* Contenedor general contenido */
+video {
+    width: 50%;
+    height: 50%;
+
+}
+.hiddencon {
+    margin: auto;
+    padding: 0;
+    width: 410px;
+    max-width: 50%;
+    height: auto;
+    z-index:99999;
+    position: fixed;/*Será la posicion?*/
+    /* Desplazamiento para ocultar hacia la derecha
+    todo el ancho del bloque menos el borde */
+    right: -402px;
+    top: 10px;
+    opacity: .9;
+}
+
+/* Contenido visible al hacer hover */
+.hiddencon:hover {
+    right: 0;
+    max-width: 50%;
+}
+/* Pestaña para desplegar */
+.hiddencon-label {
+    margin-top: -17px;
+    margin-left: -30px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    color: black;
+    background: lightskyblue;
+    font-size: 14px;
+    -moz-border-radius: 20px 0 0 20px;
+    -webkit-border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 20px;
+}
+.hiddencon, .hiddencon-label {
+    /* Desplegado suave con transiciones */
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+/* El contenido incluida variante para listas */
+.hiddencon p {
+    margin: 0;
+    padding: 0;
+    border: 8px solid lightskyblue;
+    border-right: 0;
+    color: black;
+    background-color: whitesmoke;
+    text-align:center;
+    vertical-align: center;
+    -moz-border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    border-radius: 10px 0 0 10px;
 }
