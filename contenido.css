@@ -40,11 +40,25 @@ section{
 aside {
 
     width: 15%;
-    height: 500px;
+
     float: left;
     border-radius: 0 0 30px 30px;
 
 }
+label.izenburu{
+
+    font-size: 2em;
+    font-family: "Bodoni MT";
+    font-style: italic;
+    max-font-size: inherit;
+    color: lightcyan;
+}
+label.descripcion{
+
+    font-family: "Book Antiqua";
+    color: lightgrey ;
+}
+
 
 img.mySlides{
     width: 100%;
@@ -59,8 +73,19 @@ img.animal{
     width: 100%;
     height: auto;
 }
+div.nav{
 
-#madre{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#tab1{
+
+    padding: 5% 2% 10%;
+}
+
+#madre, #padre{
+    padding-bottom: 20%;
 
 width: auto;
 }
@@ -83,17 +108,7 @@ width: auto;
     transition: max-height 0.8s linear;/*el tiempo que tarda en desplazarse*/
     z-index: 1;/*la posicion en la que está, encima de la foto*/
 }
-/*Este es el contenido del desplegable*/
-#activar ~ .desplegable .contenido {
-    width: 100%;/* Lo que ocupa*/
-    max-height: 0;/*Desaparece el boton si se cambia*/
-    overflow: hidden;
-    padding: 0 20px;
-    border: 0;
-    box-sizing: border-box;
-    color: #fff;
-    background: #000;
-}
+/*Contenido de los links, colores, cambios de color etc*/
 
 .label {
     position: relative;
@@ -110,22 +125,7 @@ width: auto;
     font-family: Oswald;
     cursor: pointer;/*cambia el tipo de cursor cuando se está sobre el boton*/
 }
-#activar ~ .desplegable .label:before {
-    content: "¡Bienvenidos a los Mocaloa!";/*contenido del label*/
-}
 
-#activar:checked ~ .desplegable,
-#activar:checked ~ .desplegable .contenido {
-    max-height: 100%;/*el porcentaje de contenido que muestra*/
-}
-
-#activar:checked ~ .desplegable .contenido {
-    padding: 30px 20px;
-}
-
-#activar:checked ~ .desplegable .label:before {
-    content: "CERRAR";
-}
 div.iconmenu div {
     position: relative;
     display: inline;/*cómo se distribuyen los contenidos, en linea o en bloque*/
@@ -162,65 +162,33 @@ div.iconmenu div a:hover {
     color: orange;
 }
 
-/* Contenido lateral oculto*/
-/* Contenedor general contenido */
-video {
-    width: 50%;
-    height: 50%;
 
-}
-.hiddencon {
-    margin: auto;
-    padding: 0;
-    width: 410px;
-    max-width: 50%;
-    height: auto;
-    z-index:99999;
-    position: fixed;/*Será la posicion?*/
-    /* Desplazamiento para ocultar hacia la derecha
-    todo el ancho del bloque menos el borde */
-    right: -402px;
-    top: 10px;
-    opacity: .9;
-}
+/*Hover de las imágenes*/
 
-/* Contenido visible al hacer hover */
-.hiddencon:hover {
-    right: 0;
-    max-width: 50%;
+caja {
+    position: relative; /*Para poder ubicar la info dentro de la caja*/
+    margin: 10px auto;
 }
-/* Pestaña para desplegar */
-.hiddencon-label {
-    margin-top: -17px;
-    margin-left: -30px;
-    padding: 10px;
-    position: absolute;
-    top: 50%;
-    display: inline-block;
-    color: black;
-    background: lightskyblue;
-    font-size: 14px;
-    -moz-border-radius: 20px 0 0 20px;
-    -webkit-border-radius: 20px 0 0 20px;
-    border-radius: 20px 0 0 20px;
+.caja img {
+    border:2px solid black;
 }
-.hiddencon, .hiddencon-label {
-    /* Desplegado suave con transiciones */
-    -moz-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+.textoCaja {
+    font-family: "Book Antiqua";
+    width: 80%;
+    position: absolute; /*Info sobre la imagen*/
+    top: 5%;
+    left: 10%; /*Desplazamos a partir de la esquina superior izquierda*/
+    zoom: 1;
+    filter: alpha(opacity=0); /*Opacidad Para IE */
+    opacity: 0; /*Inicialmente transparente */
+    padding: 5px;
+    color: navajowhite;
+    background: #007BB6;
+    -moz-transition:all ease .8s; /*Aplicamos una ligera transición*/
+    -webkit-transition:all ease .8s ;
+    transition:all ease .8s;
 }
-/* El contenido incluida variante para listas */
-.hiddencon p {
-    margin: 0;
-    padding: 0;
-    border: 8px solid lightskyblue;
-    border-right: 0;
-    color: black;
-    background-color: whitesmoke;
-    text-align:center;
-    vertical-align: center;
-    -moz-border-radius: 10px 0 0 10px;
-    -webkit-border-radius: 10px 0 0 10px;
-    border-radius: 10px 0 0 10px;
+.caja:hover .textoCaja {
+    filter: alpha(opacity=80);
+    opacity: .8; /*Al hacer hover sobre la caja hacemos visible los datos*/
 }
