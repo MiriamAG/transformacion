@@ -1,0 +1,68 @@
+body{
+    background-image: url("http://walldiskpaper.com/wp-content/uploads/2015/01/Black-Dog-Wallpaper-Windows.jpeg");
+    margin: 0 auto;
+
+}
+
+body{
+    width: 42%;
+    height: 50%;
+
+}
+header{
+   width: auto;
+    background-color: black;
+
+}
+
+img{
+     width: 100%;
+     height: auto;
+ }
+div.botones a:hover{
+
+    text-decoration: none;
+    color: orange;
+
+}
+div.nav{
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+div.iconmenu div {
+    position: relative;
+    display: inline;/*cómo se distribuyen los contenidos, en linea o en bloque*/
+    overflow: hidden;
+}
+
+div.iconmenu div a {
+    text-decoration: none;
+    color: orange;
+    padding: 5pt;
+    font-family: Oswald, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    box-sizing: border-box;
+}
+
+div.iconmenu div a.falink {
+    color: #007BB6;
+}
+
+div.iconmenu div a.faface {
+    color: #3C599F;
+}
+
+div.iconmenu div a.fagoog {
+    color: #DA2713;
+}
+
+div.iconmenu div a.fatwit {
+    color: #5DD7FC;
+}
+
+div.iconmenu div a:hover {
+    color: orange;
+}

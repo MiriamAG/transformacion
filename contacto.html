@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Petición de información</title>
+    <link rel="stylesheet" href="contacto.css">
 </head>
-<body link="#5f9ea0" alink="#5f9ea0" vlink="#5f9ea0">
+<body>
 <header>
-    <table align="center" bgcolor="black">
-        <tr>
-            <td><img src="multimedia/Captura.JPG"/></td>
-        </tr>
-    </table>
+        <div class="container">
+            <!--Primera fila con información y bienvenida o título de la página-->
+            <div class="row align-items-center iconmenu">
+                <div class="col-3"><a class="falink" href="https://www.linkedin.com/">Linkedin</a></div>
+                <div class="col-3"><a class="fagoog" href="https://plus.google.com/">Google+</a></div>
+                <div class="col-3"><a class="fatwit" href="https://twitter.com/">Twitter</a></div>
+                <div class="col-3"><a class="faface" href="https://www.facebook.com/labradoresdemocaloa">Facebook</a></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-12">
+                    <img src="multimedia/Captura.JPG" alt="portada" class="img-fluid"/>
+                </div>
+            </div>
+        </div>
+    <div class="container botones">
+        <div class="row align-items-center nav">
+            <div class="col-sm-3">
+                <!--Lleva a la historia, primera sección-->
+                <a href="index.html">Inicio</a>
+            </div>
+            <div class="col-sm-3"><a href="cotenido2.html"><span>Quienes somos</span></a>
 
-    <table  id="navegador" width="50%" align="center" bgcolor="black">
-
-        <tr align="center">
-            <td><a href="index.html">Inicio</a></td>
-            <td><a href="cotenido2.html">Contenido</a></td>
-        </tr>
-    </table>
+                <!--Lleva a la descripción de los propietarios-->
+            </div>
+            <div class="col-sm-3" id="#galeria"><a href="#galeria">
+                <!--Lleva a la galería de imagenes y videos-->
+                <span>Galeria</span></a>
+            </div>
+            <div class="col-sm-3">
+                <!--Lleva a la página de contacto-->
+                <a href="contacto.html"><span>Contacto</span></a>
+            </div>
+        </div>
+    </div>
 </header>
 <form action="/index.html" method="get">
     <fieldset>
