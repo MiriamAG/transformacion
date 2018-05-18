@@ -4,10 +4,9 @@ body{
 
 }
 
-body{
+body.container{
     width: 42%;
     height: 50%;
-
 }
 header{
    width: auto;
